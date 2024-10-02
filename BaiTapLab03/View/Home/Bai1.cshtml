@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "~/View/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <script src="~/Scripts/MyJS/Bai01.js"></script>
+</head>
+<body>
+    <form border="1">
+        <table cellpadding="10">
+            <tr><th colspan="2" style="text-align: center;"><h1>PHIÊU THAM GIA CLB TIN HỌC LUBU</h1></th></tr>
+            <tr>
+                <td>Mã sinh viên: </td>
+                <td>
+                    <input type="text" id="studentId" name="studentId" value="Nhập Mã SV" />
+                    <span id="student_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Họ và tên: </td>
+                <td>
+                    <input type="text" id="name" name="name" value="Nhập Họ và tên" />
+                    <span id="name_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuổi: </td>
+                <td>
+                    <input type="text" id="age" name="age" value="Nhập tuổi > 18" />
+                    <span id="age_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Ngoại ngữ: </td>
+                <td>
+                    <input type="checkbox" id="language" name="language" value="Anh" /><label>Anh</label>
+                    <input type="checkbox" id="language" name="language" value="Pháp" /><label>Pháp</label>
+                    <input type="checkbox" id="language" name="language" value="Nhật" /><label>Nhật</label>
+                    <span id="language_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Chuyên ngành: </td>
+                <td>
+                    <select id="major" onchange="majorOption(this)">
+                        <option value="">Hệ thống</option>
+                        <option value="Hethong">Hệ thống</option>
+                        <option value="Phanmem">Phần mềm</option>
+                        <option value="Mangmaytinh">Mạng máy tính</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Sở thích: </td>
+                <td>
+                    <input type="text" id="specialty" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" onclick="return validate();" id="btn" name="btn"
+                           value="Đăng ký" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

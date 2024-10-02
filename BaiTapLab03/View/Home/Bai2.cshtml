@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Bai2</title>
+    <script src="~/Scripts/MyJS/Bai2.js"></script>
+</head>
+<body>
+    <form method="post">
+        <table border="1" cellpadding="10">
+            <tr>
+                <td colspan="4" style="text-align: left">
+                    Thông tin giao hàng
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Tên
+                    <input type="text" id="iName" name="Name" />
+                    <span id="Name_err"></span>
+                </td>
+                <td colspan="2">
+                    Địa chỉ nhận hàng
+                    <input type="text" id="iAddress" name="Address" />
+                    <span id="Address_err"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Số điện thoại
+                    <input type="tel" id="iTel" name="Tel" />
+                    <span id="Tel_err"></span>
+                </td>
+                <td colspan="2">
+                    Tỉnh / thành phố
+                    <input type="text" id="iCity" name="City" />
+                    <span id="City_err"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">
+                    Quận / huyện
+                    <input type="text" id="iDistrict" name="District" />
+                    <span id="District_err"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">
+                    Phường / xã
+                    <input type="text" id="iCommune" name="Commune" />
+                    <span id="Commune_err"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">
+                    Lựa chọn tên cho địa chỉ thường dùng
+                    <br />
+                    <input type="button" id="btnWork" name="Work" value="Văn phòng"
+                           onclick="Thongbao1();" />
+                    <span id="Work_err"></span>
+
+                    <input type="button" id="btnHome" name="Home" value="Nhà riêng"
+                           onclick="Thongbao2();" />
+                    <span id="Home_err"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">
+                    <input type="button" id="btnSave" name="Save" value="Lưu"
+                           onclick="Luuthongtin();" />
+                    <span id="Save_err"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
